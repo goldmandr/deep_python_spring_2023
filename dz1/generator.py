@@ -1,19 +1,18 @@
-def find_strings(file_name: str, word: str):
-    strings = []
+def find_strings(file_name: str, word: str, strings: list):
     with open(file_name, 'r') as file:
         mylist = [line.rstrip('\n') for line in file]
     for string in mylist:
-        string = string.split(' ')
-        for words in string:
-            print(words, string)
+        spl_string = string.split(' ')
+        for words in spl_string:
             if word == words:
-                strings.append(words)
+                strings.append(string)
     return strings
 
 
 def main():
     text = input()
-    find_strings('file.txt', text)
+    answer = find_strings('file.txt', text, strings=[])
+    print(answer)
 
 
 if __name__ == "__main__":
