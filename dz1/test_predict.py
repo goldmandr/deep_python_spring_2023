@@ -34,3 +34,7 @@ class TestSomeModel(unittest.TestCase):
             mock_predict.return_value = 0.3
         self.assertEqual(predict_message_mood(None, mock_predict()), "норм")
 
+    # def test_marks(self):
+    #     self.assertEqual(predict_message_mood(None, SomeModel.predict(self, 'sttr')), "отл")
+
+

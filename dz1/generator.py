@@ -5,14 +5,16 @@ def find_strings(file_name: str, word: str, strings: list):
         spl_string = string.split(' ')
         for words in spl_string:
             if word == words:
-                strings.append(string)
-    return strings
+                yield string
 
 
 def main():
-    text = input()
+    text = input('Add word to find\n')
     answer = find_strings('file.txt', text, strings=[])
-    print(answer)
+    list_of_strings = []
+    for strings in answer:
+        list_of_strings.append(strings)
+    print(list_of_strings)
 
 
 if __name__ == "__main__":
