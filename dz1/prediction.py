@@ -1,6 +1,6 @@
 class SomeModel:
     def predict(self, message: str) -> float:
-        return 1
+        return 1.0
 
 
 def predict_message_mood(
